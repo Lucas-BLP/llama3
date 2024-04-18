@@ -7,6 +7,10 @@ import fire
 
 from llama import Llama
 
+import os
+
+os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0" # set a specific gpu ID to use
 
 def main(
     ckpt_dir: str,
